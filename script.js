@@ -17,7 +17,9 @@ $(function () {
     $(".cloud").delay(2500).fadeToggle(2500);
     $(".stars").toggleClass("stars-fade");
     $(".shooting-star").toggleClass("shooting");
-
+    $("#i").html("晚安");
+    $("#YAMF").html("我喜欢你");
+    $("#subtitle").html("希望你每天都能开开心心");
     var angle = $(".sun-container").data("angle") + 360 || 360;
     $(".sun-container").css({
       transform: "rotate(" + angle + "deg)",
