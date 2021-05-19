@@ -17,9 +17,27 @@ $(function () {
     $(".cloud").delay(2500).fadeToggle(2500);
     $(".stars").toggleClass("stars-fade");
     $(".shooting-star").toggleClass("shooting");
-    $("#i").html("晚安");
-    $("#YAMF").html("我喜欢你");
-    $("#subtitle").html("希望你每天都能开开心心");
+    let wenhou = $("#i");
+    let tt = wenhou.html();
+    if (tt === "早安") {
+      wenhou.html("晚安");
+    } else if (tt === "晚安") {
+      wenhou.html("早安");
+    }
+    let gaobai = $("#YAMF");
+    let aa = gaobai.html();
+    if (aa === "特殊的星期四快乐。") {
+      gaobai.html("我喜欢你。");
+    } else if (aa === "我喜欢你。") {
+      gaobai.html("特殊的星期四快乐。");
+    }
+    let zhufu = $("#subtitle");
+    let bb = zhufu.html();
+    if (bb === "记住每一个，和你度过的早安还有晚安") {
+      zhufu.html("希望你每天都能开开心心");
+    } else if (bb === "希望你每天都能开开心心") {
+      zhufu.html("记住每一个，和你度过的早安还有晚安");
+    }
     var angle = $(".sun-container").data("angle") + 360 || 360;
     $(".sun-container").css({
       transform: "rotate(" + angle + "deg)",
